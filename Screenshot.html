@@ -1,8 +1,450 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title>Screenshot.html</title>
-</head>
-<body>
-</body>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>helloworld</title>
+        <meta name="description" content="">
+        <meta name="author" content="Ravi Teja">
+
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+        <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <!-- Required Stylesheets -->
+<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="../css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+<title>Screenshot.html</title>
+<style>
+
+.row {
+    margin: 80px 153px 80px 153px;
+    }
+
+.oldclass{
+    margin: 10px 10px 10px 10px;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    }
+
+.oldclass:hover {
+    cursor: pointer;
+    -webkit-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    transform: scale(2, 2);
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    box-shadow: 10px 10px 5px #888888;
+    z-index: 1;
+    }
+
+.newclass{
+float:left;
+}
+.brand{
+font-size:20px;
+}
+.newbar{
+min-height:35px !important;
+
+}
+.pulsetab{
+    
+  background: -webkit-linear-gradient(lightgrey, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(lightgrey, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(lightgrey, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(lightgrey, white); /* Standard syntax */
+    
+    margin-right: 5%;
+    margin-top: -3%;
+    width: 947px;
+}
+
+.side-menu {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    background-color: #f8f8f8;
+    border-right: 1px solid #e7e7e7;
+    float:left;
+    margin-top:2%;
+    height:360px;
+}
+.side-menu .navbar {
+    border: none;
+}
+.side-menu .navbar-header {
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+}
+.side-menu .navbar-nav .active a {
+    background-color: transparent;
+    margin-right: -1px;
+    border-right: 5px solid #e7e7e7;
+}
+.side-menu .navbar-nav li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+}
+.side-menu .navbar-nav li a {
+    padding: 15px;
+}
+.side-menu .navbar-nav li a .glyphicon {
+    padding-right: 10px;
+}
+.side-menu #dropdown {
+    border: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+.side-menu #dropdown .caret {
+    float: right;
+    margin: 9px 5px 0;
+}
+.side-menu #dropdown .indicator {
+    float: right;
+}
+.side-menu #dropdown > a {
+    border-bottom: 1px solid #e7e7e7;
+}
+.side-menu #dropdown .panel-body {
+    padding: 0;
+    background-color: #f3f3f3;
+}
+.side-menu #dropdown .panel-body .navbar-nav {
+    width: 100%;
+}
+.side-menu #dropdown .panel-body .navbar-nav li {
+    padding-left: 15px;
+    border-bottom: 1px solid #e7e7e7;
+}
+.side-menu #dropdown .panel-body .navbar-nav li:last-child {
+    border-bottom: none;
+}
+.side-menu #dropdown .panel-body .panel > a {
+    margin-left: -20px;
+    padding-left: 35px;
+}
+.side-menu #dropdown .panel-body .panel-body {
+    margin-left: -15px;
+}
+.side-menu #dropdown .panel-body .panel-body li {
+    padding-left: 30px;
+}
+.side-menu #dropdown .panel-body .panel-body li:last-child {
+    border-bottom: 1px solid #e7e7e7;
+}
+.side-menu #search-trigger {
+    background-color: #f3f3f3;
+    border: 0;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 18px;
+}
+.side-menu .brand-name-wrapper {
+    min-height: 50px;
+}
+.side-menu .brand-name-wrapper .navbar-brand {
+    display: block;
+}
+.side-menu #search {
+    position: relative;
+    z-index: 1000;
+}
+.side-menu #search .panel-body {
+    padding: 0;
+}
+.side-menu #search .panel-body .navbar-form {
+    padding: 0;
+    padding-right: 50px;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    border-top: 1px solid #e7e7e7;
+}
+.side-menu #search .panel-body .navbar-form .form-group {
+    width: 100%;
+    position: relative;
+}
+.side-menu #search .panel-body .navbar-form input {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    height: 50px;
+}
+.side-menu #search .panel-body .navbar-form .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 0;
+    border-radius: 0;
+    background-color: #f3f3f3;
+    padding: 15px 18px;
+}
+/* Main body section */
+.side-body {
+    margin-left: 310px;
+}
+
+.navclass{
+    border:0px solid black;
+    
+}
+</style>
+
+
+         </head>
+
+    <body>
+        <!--div-->
+          <div class="navbar navbar-inverse nav newbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="/" style="color:white;">EXACTTarget</a>
+             <ul class="nav" style="float:right;">
+                  <li class="divider-vertical"></li>
+                  <!--li><a href="#"><i class="icon-home icon-white"></i> Home</a></li-->
+              </ul>
+               <div class="pull-right">
+                <ul class="nav pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white;">Welcome John! <!--b class="caret"></b--></a>
+                        <!--ul class="dropdown-menu"-->
+                            <a href="/user/preferences"><i class="icon-cog"></i>&nbsp;&nbsp; Account</a>
+                            <a href="#" onclick="Myfunction();"><i class="icon-envelope"></i> |&nbsp;&nbsp; Help</a>
+                            <!--li class="divider"></li-->
+                            <a href="/auth/logout"><i class="icon-off"></i> |&nbsp;&nbsp; Logout</a>
+                        <!--/ul-->
+                  
+                </ul>
+              </div>
+            <div class="nav-collapse">
+             
+             
+            </div>
+        </div>
+    </div> 
+      </div>     
+    <div class="side-menu">
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Main Menu -->
+            <div class="side-menu-container">
+                <ul class="nav navbar-nav navclass">
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-envelope"></span>ExactTarget Email</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-phone"></span>ExactTarget Mobile</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-cloud"></span>CoTweet Social</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-globe"></span>ExactTarget Sites</a></li>
+                    
+                    <li><a href="#"><span class="glyphicon glyphicon-cog"></span>Automation Studio</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>Audience Builder</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-align-right"></span>Report Builder</a></li>
+                    <!-- Dropdown-->
+                    <!--li class="panel panel-default" id="dropdown">
+                        <a data-toggle="collapse" href="#dropdown-lvl1">
+                            <span class="glyphicon glyphicon-user"></span> Sub Level <span class="caret"></span>
+                        </a>
+
+                        <!-- Dropdown level 1 -->
+                        <!--div id="dropdown-lvl1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+
+                                    <!-- Dropdown level 2 -->
+                                    <!--li class="panel panel-default" id="dropdown">
+                                        <!--a data-toggle="collapse" href="#dropdown-lvl2"-->
+                                            <!--span class="glyphicon glyphicon-off"></span> Sub Level <!--span class="caret"></span-->
+                                        <!--/a-->
+                                        <!--div id="dropdown-lvl2" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <ul class="nav navbar-nav">
+                                                    <li><a href="#">Link</a></li>
+                                                    <li><a href="#">Link</a></li>
+                                                    <li><a href="#">Link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li-->
+
+                    <li><a href="#"><span class="glyphicon glyphicon-signal"></span> Link</a></li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+
+    </div>
+</div>          </div>
+<div id ="displaydata"> </div>
+            <div id ="example">
+
+            </div>
+            <br><br>
+            <div class="container pulsetab " >
+  <h4 style="color:White;">Pulse</h4>
+                <img src = "UI_CandidateTest_IMH_dashboard .png"></img>
+  <div class="row">
+                    
+<div style="padding-right:80px;background-color:lightgrey;color:#6666ff;" class="oldclass col-lg-3 col-xs-6">
+
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h3 id="coiddata">310</h3>
+                    <p style="white-space:nowrap;" id="coidhead">
+                       added Today
+                    </p>
+                  <p style="white-space:nowrap;">2.393.905 Total</p>
+                </div>
+
+            </div>
+        </div>
+  <div style="background-color: lightgrey; color: rgb(102, 102, 255); padding-right: 80px;" class="oldclass col-lg-2 col-xs-6">
+
+            <div class="small-box bg-green">
+                <div class="inner">
+                    <h3 id="numeratordata">73</h3>
+                    <p id="numeratorhead" style="white-space:nowrap;">
+                        added today
+                    </p>
+                  <p style="white-space:nowrap;">91,675 total</p>
+                </div>
+
+            </div>
+        </div>
+ <div style="padding-right:80px;background-color:lightgrey;color:#6666ff;" class="oldclass col-lg-2 col-xs-6">
+
+            <div class="small-box bg-yellow">
+                <div class="inner">
+                    <h3 id="denominatordata">56</h3>
+                    <p style="white-space:nowrap;" id="denominatorhead">
+                        added today
+                    </p>
+                  <p style="white-space:nowrap;">
+                       189,405 total
+                    </p>
+                </div>
+
+            </div>
+        </div>
+           <!--div style="padding-right:80px;background-color:lightgrey;color:#6666ff;" class="oldclass col-lg-2 col-xs-6">
+
+            <div class="small-box bg-red">
+                <div class="inner">
+                    <h3 id="percentagedata">51.0%</h3>
+                    <p id="percentagehead">
+                        Percentage
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    
+  </div-->
+        <div style="padding-right:80px;background-color:lightgrey;color:#6666ff;" class="oldclass col-lg-3 col-xs-6">
+
+            <div class="small-box bg-red">
+                <div class="inner">
+                    <h3 id="percentagedata">397/355 </h3>
+                    <p id="percentagehead" style="white-space:nowrap;">
+                        Visitors Today
+                    </p>
+                        <p  style="white-space:nowrap;">
+                        Souja Boy V.I.P
+                    </p>
+                </div>
+
+            </div>
+        </div>
+ 
+</div>
+            <script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/moment.js"></script>
+<script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap-datepaginator.js"></script>
+<!-- Basic initialization using defaults -->
+<script type='text/javascript'>
+ var options = {
+    selectedDate: '2013-01-01',
+    selectedDateFormat: 'YYYY-MM-DD',
+    highlightToday:true,
+    selectedItemWidth:200,
+    itemWidth:'100',
+    size:'large',
+    showCalendar:false,
+    width:'1000',
+    text:'   DD '
+  };
+  $('#example').datepaginator(options);
+  
+  function Myfunction(){
+      
+        $.ajax({
+                      type: 'GET',
+                      url: 'data/data/help.json',
+                     // data:jsonString,
+                      contentType: "application/json; charset=utf-8",
+                      dataType: 'json',
+                      async: true,
+                      success: function(data){
+                          console.log(data);
+                          $('#displaydata').html(data.help[0],data.help[1],data.help[2]);
+                        /**$.each(data, function(index, value) {
+                          
+
+                          // This indicates the success status
+                          // The record successfully saved
+                          // Processing the json {"status": "true"}
+
+                          if (data[index] == true) {
+                              
+                              $("#termentersuccessalert").fadeOut("slow");
+                              $("#termentersuccessalert").html("Well done!" + newterm + "deleted successfully" );
+                              $("#termdeletesuccessalert").fadeIn("slow");
+
+                              // Call refresh button to reset fields after successful insert
+                              $("#termsRefreshBtn").trigger("click");
+
+                      
+                  }
+                });**/
+              }
+            });
+      
+      
+  }
+</script>
+        
+            <!--footer>
+                <p>
+                    &copy; Copyright  by Ravi Teja
+                </p>
+            </footer-->
+        <!--/div-->
+
+    </body>
 </html>
+
